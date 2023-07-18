@@ -1,4 +1,4 @@
-package DAO;
+package DB.DAO;
 
 import DB.models.User;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;

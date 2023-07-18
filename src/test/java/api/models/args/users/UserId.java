@@ -1,2 +1,14 @@
-package API.models.args.users;public class UserId {
+package api.models.args.users;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserId {
+    private Integer user_id;
 }

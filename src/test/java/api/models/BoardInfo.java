@@ -1,4 +1,4 @@
-package API.models.args;
+package api.models;
 
 public class BoardInfo {
 }

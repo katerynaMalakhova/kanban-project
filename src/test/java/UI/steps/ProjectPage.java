@@ -1,6 +1,6 @@
 package UI.steps;
 
-import UI.elements.BoardElements;
+import UI.elements.ProjectElements;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -11,12 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class BoardPage extends BoardElements {
-    //flyout check
-    //error messages
+public class ProjectPage extends ProjectElements {
+
+    @Step("The user open task detail page")
+    public TaskPage openTask(String taskId) {
+        getTasklink(taskId).shouldBe(Condition.visible).click();
+        return new TaskPage();
+    }
 
     @Step("The user creates task")
-    public BoardPage createTask(Task task) throws ParseException {
+    public ProjectPage createTask(Task task) throws ParseException {
         getAddNewTaskButton().shouldBe(Condition.visible).click();
         getTaskTitleInput().shouldBe(Condition.visible).sendKeys(task.getTaskTitle());
         getTaskDetailInput().shouldBe(Condition.visible).sendKeys(task.getTaskDetail());
@@ -32,8 +36,9 @@ public class BoardPage extends BoardElements {
 
         return this;
     }
+
     @Step("Get created tasks")
-    public List<Task> getTasks(){
+    public List<Task> getTasks() { //improvements needed
 
         Pattern estimateHoursPattern = Pattern.compile("[0-9]+\\/.*");
         Pattern spentHoursPattern = Pattern.compile(".*[0-9]+h");
@@ -41,21 +46,20 @@ public class BoardPage extends BoardElements {
         List<Task> tasks = new ArrayList<>();
         List<SelenideElement> stickers = getTaskStickers();
 
-        for (int i=0; i<stickers.size(); i++) {
+        for (int i = 0; i < getTaskStickers().size(); i++) {
             Task task = new Task();
-
-            task.setTaskId(stickers.get(i).find(getTaskStickerId()).getText().substring(1));
-            task.setTaskTitle(stickers.get(i).find(getTaskStickerTitle()).getText());
-            task.setTaskAssignee(stickers.get(i).find(getTaskStickerAssignee()).getText());
-            task.setTaskPriority(stickers.get(i).find(getTaskStickerPriority()).getText());
-//            task.setTaskDueDate(stickers.get(i).find(getTaskStickerDueDate()).getText());
+            task.setTaskId(getTaskStickers().get(i).find(getTaskStickerId()).getText().replace("#","")); //.substring(1));
+            task.setTaskTitle(getTaskStickers().get(i).find(getTaskStickerTitle()).getText());
+            task.setTaskAssignee(getTaskStickers().get(i).find(getTaskStickerAssignee()).getText());
+            task.setTaskPriority(getTaskStickers().get(i).find(getTaskStickerPriority()).getText());
+////
+//           task.setTaskDueDate(stickers.get(i).find(getTaskStickerDueDate()).getText());
 //            task.setTaskEstimateHours(Integer.valueOf(estimateHoursPattern.matcher(stickers.get(i).find(getTaskStickerTimeRealToEstimated()).getText()).group(1)));
 //            task.setTaskSpendHours(Integer.valueOf(spentHoursPattern.matcher(stickers.get(i).find(getTaskStickerTimeRealToEstimated()).getText()).group(1)));
-            task.setTaskComplexity(Integer.valueOf(stickers.get(i).find(getTaskStickerComplexity()).getText()));
+//            task.setTaskComplexity(Integer.valueOf(stickers.get(i).find(getTaskStickerComplexity()).getText()));
 
             tasks.add(task);
         }
-
         return tasks;
     }
 }

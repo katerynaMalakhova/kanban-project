@@ -6,13 +6,14 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-public class BoardElements {
+public class ProjectElements {
+    private final SelenideElement projectTitle = Selenide.$x("//span[@class='title']");
     private final SelenideElement addNewTaskButton = Selenide.$x("(//div[@class='board-add-icon'])[1]");
     private final SelenideElement taskTitleInput = Selenide.$x("//input[@name='title']");
     private final SelenideElement taskDetailInput = Selenide.$x("//textarea[@name='description']");
     private final SelenideElement taskTagSelect = Selenide.$x("//select[@name='tags[]']");
     private final SelenideElement taskColorDropdown = Selenide.$x("//select[@name='color_id']");
-    private final SelenideElement taskAssigneeDropdown = Selenide.$x( "//select[@name='owner_id']");
+    private final SelenideElement taskAssigneeDropdown = Selenide.$x("//select[@name='owner_id']");
     private final SelenideElement taskPriorityDropdown = Selenide.$x("//select[@name='priority']");
     private final SelenideElement taskDueDateInput = Selenide.$x("//input[@name='date_due']");
     private final SelenideElement taskStartDateInput = Selenide.$x("//input[@name='date_started']");
@@ -30,11 +31,16 @@ public class BoardElements {
     private final By taskStickerDueDate = By.xpath(".//span[@class='task-date']");
     private final By taskStickerAssignee = By.xpath(".//span[@class='task-board-assignee']");
     private final By taskStickerPriority = By.xpath(".//span[@class='task-priority']");
+    private SelenideElement tasklink;
 
+    public SelenideElement getProjectTitle() {
+        return projectTitle;
+    }
 
     public SelenideElement getAddNewTaskButton() {
         return addNewTaskButton;
     }
+
     public SelenideElement getTaskTitleInput() {
         return taskTitleInput;
     }
@@ -94,9 +100,11 @@ public class BoardElements {
     public By getTaskStickerDropdown() {
         return taskStickerDropdown;
     }
+
     public By getTaskStickerId() {
         return taskStickerId;
     }
+
     public By getTaskStickerTitle() {
         return taskStickerTitle;
     }
@@ -119,6 +127,11 @@ public class BoardElements {
 
     public By getTaskStickerPriority() {
         return taskStickerPriority;
+    }
+
+    public SelenideElement getTasklink(String taskId) {
+        String path = String.format("//div[@class='task-board-title']/a[@href='/task/%s']", taskId);
+        return Selenide.$x(path);
     }
 }
 

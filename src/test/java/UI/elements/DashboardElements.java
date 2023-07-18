@@ -7,30 +7,20 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 
-public class DashboardPage {
+public class DashboardElements {
 
-//   private final SelenideElement createNewProjectLink = Selenide.$x("(//span[@class='title'])[1]");
-   private final SelenideElement createNewProjectLink = Selenide.$x("(//a[@href='/project/create'])[2]");
-
+    //   private final SelenideElement createNewProjectLink = Selenide.$x("(//span[@class='title'])[1]");
+    private final SelenideElement createNewProjectLink = Selenide.$x("(//a[@href='/project/create'])[2]");
     private final SelenideElement newProjectFormNameField = Selenide.$x("//input[@name='name']");
-
     private final SelenideElement newProjectFormIdField = Selenide.$x("//input[@name='identifier']");
-
     private final SelenideElement newProjectFormTaskLimitField = Selenide.$x("//input[@name='task_limit']");
-
     private final SelenideElement newProjectFormSaveButton = Selenide.$x("//form//button");
+    private final SelenideElement dashboardTitle = Selenide.$x("//span[@class='title']");
+    private SelenideElement projectLink;
 
-    @Step("The user creates project")
-    public ProjectPage createProject(String projectName, String projectId, int projectLimit) {
-        getCreateNewProjectLink().shouldBe(Condition.visible).hover().click();
-        getNewProjectFormNameField().shouldBe(Condition.visible).sendKeys(projectName);
-        getNewProjectFormIdField().shouldBe(Condition.visible).sendKeys(projectId);
-        getNewProjectFormTaskLimitField().shouldBe(Condition.visible).sendKeys(String.valueOf(projectLimit));
-        getNewProjectFormSaveButton().shouldBe(Condition.visible).click();
-
-        return new ProjectPage();
+    public SelenideElement getDashboardTitle() {
+        return dashboardTitle;
     }
-
 
     public SelenideElement getCreateNewProjectLink() {
         return createNewProjectLink;
@@ -52,4 +42,8 @@ public class DashboardPage {
         return newProjectFormSaveButton;
     }
 
+    public SelenideElement getProjectLink(String projectId) {
+        String path = String.format("//span/a[contains(@href, '/board/%s')]", projectId);
+        return Selenide.$x(path);
+    }
 }

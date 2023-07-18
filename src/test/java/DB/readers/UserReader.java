@@ -1,13 +1,12 @@
-package utils;
+package DB.readers;
 
-import DAO.UserDao;
-import models.User;
-import org.apache.commons.compress.compressors.zstandard.ZstdUtils;
+import DB.DAO.UserDao;
+import DB.models.User;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
 import java.util.List;
 
-public class UserReader extends DBReader{
+public class UserReader extends DBReader {
 
     public static List<User> getListOfUsers(){
         return init()
@@ -30,8 +29,4 @@ public class UserReader extends DBReader{
         init().onDemand(UserDao.class).delete(id);
     };
 
-//    public static void main(String[] args) {
-//        List<User> users = getListOfUsers();
-//        System.out.println(users.stream().toArray());
-//    }
 }

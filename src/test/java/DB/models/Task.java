@@ -1,14 +1,11 @@
-package models;
+package DB.models;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Task extends Object{
-
-    String pattern = "dd/MM/yyyy hh:mm";
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd hh:mm");
+    private String taskId;
     private String taskTitle;
     private String taskDetail;
     private String taskAssignee;
@@ -18,7 +15,6 @@ public class Task extends Object{
     private int taskEstimateHours;
     private int taskSpendHours;
     private int taskComplexity;
-
 
     public Task(){}
 
@@ -32,6 +28,14 @@ public class Task extends Object{
         this.taskEstimateHours = taskEstimateHours;
         this.taskSpendHours = taskSpendHours;
         this.taskComplexity = taskComplexity;
+    }
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     public String getTaskTitle() {
@@ -110,16 +114,18 @@ public class Task extends Object{
         if (obj instanceof Task)
         {
             Task c = (Task) obj;
-            if ( this.taskTitle.equals(c.taskTitle) &&
-                    this.taskAssignee.equals(c.taskAssignee)&&
-                    this.taskPriority.equals(c.taskPriority) &&
-                    this.taskDueDate.equals(c.taskDueDate)&&
-                    this.taskEstimateHours == c.taskEstimateHours &&
-                    this.taskSpendHours == c.taskSpendHours &&
-                    this.taskComplexity == c.taskComplexity
+            if ( this.taskTitle.equals(c.taskTitle)&&
+                    this.taskAssignee.equals(c.taskAssignee)
+//                    this.taskPriority == c.taskPriority &&
+//                    this.taskDueDate.equals(c.taskDueDate)&&
+//                    this.taskEstimateHours == c.taskEstimateHours &&
+//                    this.taskSpendHours == c.taskSpendHours &&
+//                    this.taskComplexity == c.taskComplexity
             )
                 return true;
         }
             return false;
     }
+
+
 }

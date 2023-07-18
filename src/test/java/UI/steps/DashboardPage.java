@@ -1,26 +1,11 @@
-package baseTest;
+package UI.steps;
 
-
+import UI.elements.DashboardElements;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 
-public class DashboardPage {
-
-//   private final SelenideElement createNewProjectLink = Selenide.$x("(//span[@class='title'])[1]");
-   private final SelenideElement createNewProjectLink = Selenide.$x("(//a[@href='/project/create'])[2]");
-
-    private final SelenideElement newProjectFormNameField = Selenide.$x("//input[@name='name']");
-
-    private final SelenideElement newProjectFormIdField = Selenide.$x("//input[@name='identifier']");
-
-    private final SelenideElement newProjectFormTaskLimitField = Selenide.$x("//input[@name='task_limit']");
-
-    private final SelenideElement newProjectFormSaveButton = Selenide.$x("//form//button");
+public class DashboardPage extends DashboardElements {
 
     @Step("The user creates project")
     public ProjectPage createProject(String projectName, String projectId, int projectLimit) {
@@ -33,25 +18,11 @@ public class DashboardPage {
         return new ProjectPage();
     }
 
+    @Step("The user open project detail page")
+    public ProjectPage openProject(String projectId) {
+        getProjectLink(projectId).shouldBe(Condition.visible).click();
 
-    public SelenideElement getCreateNewProjectLink() {
-        return createNewProjectLink;
-    }
-
-    public SelenideElement getNewProjectFormNameField() {
-        return newProjectFormNameField;
-    }
-
-    public SelenideElement getNewProjectFormIdField() {
-        return newProjectFormIdField;
-    }
-
-    public SelenideElement getNewProjectFormTaskLimitField() {
-        return newProjectFormTaskLimitField;
-    }
-
-    public SelenideElement getNewProjectFormSaveButton() {
-        return newProjectFormSaveButton;
+        return new ProjectPage();
     }
 
 }

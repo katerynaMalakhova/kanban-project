@@ -8,20 +8,16 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Description;
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 
 import static utils.EnvProperties.*;
 
-public class CreateProjectTest extends BaseTest {
-    private final static String PROJECT_NAME = String.format("projectName-%d", Math.random());
-    private final static String PROJECT_ID = String.format("new7%d", Math.random());
-    private final static int PROJECT_LIMIT = 6;
-
-    @BeforeSuite
+public class ProjectTest extends BaseTest {
+    @BeforeMethod
     public void setUp() {
-        Configuration.browser = "chrome";
+        Configuration.browser = BROWSER;
+        Configuration.headless = Boolean.parseBoolean(HEADLESS);
         Selenide.open(BASE_URL);
         new LogInPage().logIn(ADMIN_USERNAME, ADMIN_PASSWORD);
     }
@@ -31,11 +27,10 @@ public class CreateProjectTest extends BaseTest {
     public void testCreateProject() {
         new DashboardPage().createProject(PROJECT_NAME, PROJECT_ID, PROJECT_LIMIT);
 
-        //check on DB or by API
-        Assert.assertTrue(new ProjectPage()
+        Assert.assertEquals(new ProjectPage()
                         .getProjectTitle()
                         .shouldBe(Condition.visible)
-                        .getText().contains(PROJECT_NAME),
+                        .getText(), PROJECT_NAME,
                 "Wrong title on the project page");
     }
 

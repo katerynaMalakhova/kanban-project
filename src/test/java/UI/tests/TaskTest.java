@@ -26,13 +26,6 @@ public class TaskTest extends BaseTest {
     private String PROJECT_ID;
     private String TASK_ID;
 
-    private final static String USER_NAME = "user" + Math.random();
-    private final static String USER_PASSWORD = "password";
-    private final static String PROJECT_NAME = "project" + Math.random();
-    private final static int PROJECT_LIMIT = 6;
-    private final static String TASK_TITLE = "task" + Math.random();
-    private final static Task TASK = new Task("ProjectName", "Description", "admin", "5", "12/12/2023", "01/12/2023", 20, 30, 10);
-
     @BeforeMethod
     public void setUp() {
         //create user
@@ -48,24 +41,27 @@ public class TaskTest extends BaseTest {
 
         //create task
         TaskApiSteps taskApiSteps = new TaskApiSteps();
-        TASK_ID = taskApiSteps.createTask(TASK_TITLE, PROJECT_ID);
+        TASK_ID = taskApiSteps.createTask(TASK_TITLE, PROJECT_ID, USER_ID);
 
-        Configuration.browser = "chrome";
+
+        Configuration.browser = BROWSER;
+        Configuration.headless = Boolean.parseBoolean(HEADLESS);
         Selenide.open(BASE_URL);
         new LogInPage().logIn(USER_NAME, USER_PASSWORD);
         new DashboardPage().openProject(PROJECT_ID);
-        new ProjectPage().openTask(TASK_ID);
+//        new ProjectPage().openTask(TASK_ID);
     }
 
     @Test
-    @Description("The test is checking task creation ")
+    @Description("The test is checking task creation")
     public void testCreateTask() throws ParseException {
         ProjectPage projectPage = new ProjectPage();
         Assert.assertEquals(projectPage.getProjectTitle().shouldBe(Condition.visible).getText(), PROJECT_NAME);
         List<Task> tasks = projectPage
                 .createTask(TASK)
                 .getTasks();
-        Assert.assertTrue(tasks.contains(TASK),
+        Assert.assertTrue(tasks
+                        .contains(TASK),
                 "Cannot find created task on the board");
     }
 

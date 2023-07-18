@@ -1,14 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Use tests automation" parallel="methods">
+<suite name="Use tests automation">
     <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>
-
-<!--    <test name="Operations smoke">-->
-<!--        <classes>-->
-<!--            <class name="UI.LogInTest"></class>-->
-<!--            <class name="UI.CreateProjectTest"></class>-->
-<!--        </classes>-->
-
+    <test name="UI regression">
+        <classes>
+            <class name="UI.tests.LogInTest"></class>
+            <class name="UI.tests.TaskTest"></class>
+            <class name="UI.tests.CommentTest"></class>
+            <class name="UI.tests.ProjectTest"></class>
+        </classes>
+    </test>
+<!--    <test name="API regression">-->
+<!--    <classes>-->
+<!--        <class name="api.tests.BoardApiTests"></class>-->
+<!--        <class name="api.tests.ProjectApiTests"></class>-->
+<!--        <class name="api.tests.TaskApiTests"></class>-->
+<!--        <class name="api.tests.UserApiTest"></class>-->
+<!--    </classes>-->
 <!--    </test>-->
 </suite>

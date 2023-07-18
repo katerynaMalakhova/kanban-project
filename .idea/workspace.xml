@@ -4,14 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ebbacf6-32cd-4ab6-b94f-fb45d206970b" name="Changes" comment="" />
+    <list default="true" id="8ebbacf6-32cd-4ab6-b94f-fb45d206970b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/DAO/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/models/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/models/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/models/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/readers/DBReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/readers/DBReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/readers/UserReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/readers/UserReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/elements/DashboardElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/elements/DashboardElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/elements/LogInElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/elements/LogInElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/elements/ProjectElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/elements/ProjectElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/elements/TaskElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/elements/TaskElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/elements/com/codeborne/selenide/annotations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/elements/com/codeborne/selenide/annotations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/steps/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/steps/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/steps/LogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/steps/LogInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/steps/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/steps/ProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/tests/CommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/tests/CommentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/tests/LogInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/tests/LogInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/tests/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/tests/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/tests/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/tests/TaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/enums/UserRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/enums/UserRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/methods/Boards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/methods/Boards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/methods/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/methods/Projects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/methods/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/methods/Tasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/methods/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/methods/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/BoardInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/BoardInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/ColumnDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/ColumnDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/BodyArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/BodyArgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/projects/AddProductToProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/projects/AddProductToProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/projects/CreateProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/projects/CreateProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/projects/ProjectId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/projects/ProjectId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/tasks/CreateTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/tasks/CreateTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/tasks/TaskId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/tasks/TaskId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/users/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/users/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/models/args/users/UserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/models/args/users/UserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/BaseApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/steps/BaseApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/BoardApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/steps/BoardApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/ProjectApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/steps/ProjectApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/TaskApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/steps/TaskApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/steps/UserApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/steps/UserApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/BoardApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/BoardApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/ProjectApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/ProjectApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/TaskApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/TaskApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/env.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/EnvProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/EnvProperties.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -26,12 +90,118 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/katerynamalakhova/Documents/kanboard_project/src/test/java/UI/elements&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/UI/elements" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="API.models" />
+      <recent name="UI.tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.TaskTest">
+    <configuration name="ProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="kanboard_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI.tests" />
+      <option name="MAIN_CLASS_NAME" value="UI.tests.ProjectTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.testCreateProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="kanboard_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI.tests" />
+      <option name="MAIN_CLASS_NAME" value="UI.tests.ProjectTest" />
+      <option name="METHOD_NAME" value="testCreateProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="kanboard_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI.tests" />
+      <option name="MAIN_CLASS_NAME" value="UI.tests.TaskTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest.testCreateTask" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="kanboard_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UI.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UI.tests" />
+      <option name="MAIN_CLASS_NAME" value="UI.tests.TaskTest" />
+      <option name="METHOD_NAME" value="testCreateTask" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/katerynamalakhova/Documents/kanboard_project/src/test/java/resources/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="kanboard_project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TaskTest" />
+        <item itemvalue="TestNG.ProjectTest.testCreateProject" />
+        <item itemvalue="TestNG.ProjectTest" />
+        <item itemvalue="TestNG./Users/katerynamalakhova/Documents/kanboard_project/src/test/java/resources/regression.xml" />
+        <item itemvalue="TestNG.TaskTest.testCreateTask" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,5 +212,62 @@
       <updated>1687776869339</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/DB/readers/UserReader.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UI/steps/TaskPage.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/steps/BoardApiSteps.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/tests/BoardApiTests.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/api/steps/BoardApiSteps.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

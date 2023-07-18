@@ -1,33 +1,27 @@
 package UI.elements;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
-import models.Comment;
 import org.openqa.selenium.By;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class TaskPage {
+public class TaskElements {
 
     private final SelenideElement taskTitle = Selenide.$x("//section [@id='task-summary']/h2");
-
     private final List<SelenideElement> taskComments = Selenide.$$x("//div[@id='comments']");
-    private final By taskCommentTitle = By.xpath(".//div[@id='comment-title']");
-    private final By taskCommentContent = By.xpath(".//div[@id='comment-content']");
-
+    private final By taskCommentTitle = By.xpath(".//strong[@class='comment-username']");
+    private final By taskCommentContent = By.xpath(".//div[@class='comment-content']//p");
+    private final SelenideElement taskCommentAccordion = Selenide.$x("//summary[contains(text(), 'Comments')]");
     private final SelenideElement taskCommentTextarea = Selenide.$x("//textarea[@name='comment']");
     private final SelenideElement taskCommentSaveButton = Selenide.$x("//button");
-
-
     private final SelenideElement taskCloseButton = Selenide.$x("//a[@href='/task/3/close']");
-
     private final SelenideElement taskClosePopupTitle = Selenide.$x("//div[@class='page-header']/h2");
     private final SelenideElement taskClosePopupAlert = Selenide.$x("//p[@class='alert alert-info']");
     private final SelenideElement taskClosePopupYesButton = Selenide.$x("//button[@id='modal-confirm-button']");
     private final SelenideElement taskAlert = Selenide.$x("//div[contains(@class,'alert-success')]");
+    private final SelenideElement taskStatus = Selenide.$x("//li/strong[contains(text(),'Status:')]/following-sibling::span");
+
     public SelenideElement getTaskTitle() {
         return taskTitle;
     }
@@ -44,9 +38,12 @@ public class TaskPage {
         return taskCommentSaveButton;
     }
 
-    public SelenideElement getTaskCloseButton() {
-        return taskCloseButton;
+    public SelenideElement getTaskCloseButton(String taskId) {
+        String path = String.format("//a[@href='/task/%s/close']", taskId);
+        return Selenide.$x(path);
     }
+
+    public SelenideElement getTaskCommentAccordion() {return taskCommentAccordion;}
 
     public SelenideElement getTaskClosePopupTitle() {
         return taskClosePopupTitle;
@@ -64,38 +61,15 @@ public class TaskPage {
         return taskAlert;
     }
 
-    @Step("The user adds comment to the task")
-    public TaskPage addComment() {
-        getTaskCommentTextarea().shouldBe(Condition.visible).sendKeys("comment");
-        getTaskCommentSaveButton().shouldBe(Condition.visible).click();
-
-        return this;
+    public By getTaskCommentTitle() {
+        return taskCommentTitle;
     }
 
-    @Step("Get comments added to the task")
-    public List<Comment> getComments() {
-
-        List<Comment> comments = new ArrayList<>();
-
-        for (int i = 0; i < getTaskComments().size(); i++) {
-            Comment comment = new Comment();
-
-            comment.setCommentAuthor(getTaskComments().get(i).find(taskCommentTitle).getText());
-            comment.setCommentContent(getTaskComments().get(i).find(taskCommentContent).getText());
-
-            comments.add(comment);
-        }
-
-        return comments;
+    public By getTaskCommentContent() {
+        return taskCommentContent;
     }
 
-    @Step("The user closes the task")
-    public TaskPage closeTask() {
-        getTaskCloseButton().shouldBe(Condition.visible).click();
-        getTaskClosePopupTitle().shouldBe(Condition.visible).shouldHave(Condition.exactText("Close a task"));
-        getTaskClosePopupYesButton().shouldBe(Condition.visible).click();
-
-        return this;
+    public SelenideElement getTaskStatus() {
+        return taskStatus;
     }
-
 }

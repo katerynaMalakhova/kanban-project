@@ -1,5 +1,6 @@
-package API.models;
+package api.models;
 
+import api.models.args.tasks.CreateTask;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +22,7 @@ public class ColumnDetails {
     private Integer task_limit;
     private Integer hide_in_dashboard;
     private String description;
-    private List<TaskDetails> tasks;
+    private List<CreateTask> tasks;
     private Integer nb_open_tasks;
     private Integer nb_tasks;
     private Integer nb_closed_tasks;
