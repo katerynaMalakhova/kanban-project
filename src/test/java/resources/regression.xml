@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Use tests automation" parallel="methods">
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+<!--    <test name="Operations smoke">-->
+<!--        <classes>-->
+<!--            <class name="UI.LogInTest"></class>-->
+<!--            <class name="UI.CreateProjectTest"></class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+</suite>
